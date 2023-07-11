@@ -1,6 +1,5 @@
 <?php
-namespace Jibix\FunctionalItem\item;
-use Jibix\FunctionalItem\EventListener;
+namespace Jibix\FunctionalItem;
 use pocketmine\item\Item;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
@@ -9,7 +8,7 @@ use pocketmine\utils\SingletonTrait;
 
 /**
  * Class FunctionalItemManager
- * @package Jibix\FunctionalItem\item
+ * @package Jibix\FunctionalItem
  * @author Jibix
  * @date 08.07.2023 - 21:56
  * @project FunctionalItem

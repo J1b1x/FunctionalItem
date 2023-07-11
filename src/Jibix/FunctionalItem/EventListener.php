@@ -1,7 +1,6 @@
 <?php
 namespace Jibix\FunctionalItem;
 use Jibix\FunctionalItem\item\flag\NonPlaceableFlag;
-use Jibix\FunctionalItem\item\FunctionalItemManager;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\inventory\InventoryTransactionEvent;

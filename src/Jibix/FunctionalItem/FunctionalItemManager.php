@@ -1,5 +1,6 @@
 <?php
 namespace Jibix\FunctionalItem;
+use Jibix\FunctionalItem\item\FunctionalItem;
 use pocketmine\item\Item;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;

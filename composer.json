@@ -2,12 +2,13 @@
   "name": "j1b1x/functionalitem",
   "autoload": {
     "psr-4": {
-      "Jibix\\FunctionalItem\\": "src/Jibix/FunctionalItem/"
+      "Jibix\\FunctionalItem\\": "src/Jibix/FunctionalItem"
     }
   },
   "authors": [
     {
-      "name": "Jibix"
+      "name": "Jibix",
+      "homepage": "https://github.com/J1b1x"
     }
   ],
   "require-dev": {

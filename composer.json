@@ -1,0 +1,16 @@
+{
+  "name": "j1b1x/functionalitem",
+  "autoload": {
+    "psr-4": {
+      "Jibix\\FunctionalItem\\": "src/Jibix/FunctionalItem/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jibix"
+    }
+  ],
+  "require-dev": {
+    "pocketmine/pocketmine-mp": "^5.0"
+  }
+}

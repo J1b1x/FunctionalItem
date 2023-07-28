@@ -19,7 +19,7 @@ abstract class FunctionalItem{
 
     public const IDENTIFIER_TAG = "id";
 
-    //I know this is a bad/annoying way to do return getInternalItem(stuff) every time, but i want the possibility to pass custom arguments to the getItem function, so this is the best way i can think of so far
+    //I know it's a bad/annoying way to do return getInternalItem(stuff) every time, but i want the possibility to pass custom arguments to the getItem function, so this is the best way i can think of so far
     abstract public static function getItem(?Player $player = null): Item;
 
     protected static function getInternalItem(Item $item): Item{

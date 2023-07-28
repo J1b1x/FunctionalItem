@@ -58,7 +58,7 @@ class EventListener implements Listener{
      * @param PlayerItemUseEvent $event
      * @return void
      * @handleCancelled
-     * @priority LOWEST
+     * @priority LOW
      */
     public function onUseItem(PlayerItemUseEvent $event): void{
         $player = $event->getPlayer();

@@ -19,7 +19,7 @@ FunctionalItem is a PocketMine-MP library to give items functionalities using ac
 ## Library registration
 ### Just do this in the onEnable function of your plugin
 ```php
-\Jibix\FuctionalItem\FunctionalItemManager::initialize($this);
+\Jibix\FuctionalItem\FunctionalItemManager::register($this);
 ```
 
 ## Item registration

@@ -39,7 +39,7 @@ class EventListener implements Listener{
      * @priority LOWEST
      */
     public function onDrop(PlayerDropItemEvent $event): void{
-        if (($item = FunctionalItemManager::getInstance()->getItem($event->getItem())) !== null && !$item?->onDrop($event->getPlayer())) $event->cancel();
+        if (($item = FunctionalItemManager::getInstance()->getItem($event->getItem())) !== null && !$item?->onDrop($event->getPlayer(), $event->getItem())) $event->cancel();
     }
 
     /**

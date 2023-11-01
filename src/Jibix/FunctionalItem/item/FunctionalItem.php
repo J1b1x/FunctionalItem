@@ -47,7 +47,7 @@ abstract class FunctionalItem{
         return true;
     }
 
-    public function onDrop(Player $player): bool{
+    public function onDrop(Player $player, Item $item): bool{
         return true;
     }
 

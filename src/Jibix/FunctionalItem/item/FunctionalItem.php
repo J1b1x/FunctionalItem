@@ -1,5 +1,6 @@
 <?php
 namespace Jibix\FunctionalItem\item;
+use Exception;
 use pocketmine\entity\Entity;
 use pocketmine\inventory\Inventory;
 use pocketmine\item\Item;
@@ -19,13 +20,14 @@ abstract class FunctionalItem{
 
     public const IDENTIFIER_TAG = "id";
 
-    //I know it's a bad/annoying way to do return getInternalItem(stuff) every time, but i want the possibility to pass custom arguments to the getItem function, so this is the best way i can think of so far
-    abstract public static function getItem(?Player $player = null): Item;
-
-    protected static function getInternalItem(Item $item): Item{
+    public static function get(Player $player): Item{
+        if (static::class === self::class) throw new Exception("Call this function in a sub-class and not directly");
+        $item = static::getItem($player);
         $item->getNamedTag()->setString(self::IDENTIFIER_TAG, static::class);
         return $item;
     }
+
+    abstract protected static function getItem(Player $player): Item;
 
     public static function equals(Item $item): bool{
         return $item->getNamedTag()->getString(self::IDENTIFIER_TAG, "") === static::class;

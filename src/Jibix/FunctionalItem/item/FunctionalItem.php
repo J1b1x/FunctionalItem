@@ -20,14 +20,18 @@ abstract class FunctionalItem{
 
     public const IDENTIFIER_TAG = "functional_id";
 
-    public static function get(Player $player): Item{
+    final public static function get(Player $player): Item{
         if (static::class === self::class) throw new Exception("Call this function in a sub-class and not directly");
-        $item = static::getItem($player);
-        $item->getNamedTag()->setString(self::IDENTIFIER_TAG, static::class);
-        return $item;
+        return static::applyIdTag(static::getItem($player));
     }
 
     abstract protected static function getItem(Player $player): Item;
+
+    //You shouldn't do it, but in case you're using a custom function to get the item, just call this function.
+    protected static function applyIdTag(Item $item): Item{
+        $item->getNamedTag()->setString(self::IDENTIFIER_TAG, static::class);
+        return $item;
+    }
 
     public static function equals(Item $item): bool{
         return $item->getNamedTag()->getString(self::IDENTIFIER_TAG, "") === static::class;

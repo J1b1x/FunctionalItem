@@ -18,7 +18,7 @@ use pocketmine\player\Player;
  */
 abstract class FunctionalItem{
 
-    public const IDENTIFIER_TAG = "id";
+    public const IDENTIFIER_TAG = "functional_id";
 
     public static function get(Player $player): Item{
         if (static::class === self::class) throw new Exception("Call this function in a sub-class and not directly");

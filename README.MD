@@ -81,7 +81,7 @@ class ExampleItem extends \Jibix\FuctionalItem\item\FunctionalItem{
     private const USE_COOLDOWN = 5 * 20; //5 seconds
     
     public static function getItem(?Player $player = null, string $customName = "§bExample"): Item{
-        return self::getInternalItem(VanillaItems::STICK()->setCustomName($customName));
+        return self::applyIdTag(VanillaItems::STICK()->setCustomName($customName));
     }
     
     public function getCooldownTicks(Player $player, Item $item): int{
